@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "skills": {
+    "canvas-generative": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/canvas-generative/SKILL.md",
+      "computedHash": "fa05bb20bc8556166e7cdcb9ba31b6cd0c0489cecb6d294d763fb124185cd32b"
+    },
+    "cast": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/cast/SKILL.md",
+      "computedHash": "5909a4adbceba66cc47e865bd02fc8ffde3ef6bea9a1682f1b68008b47b791d4"
+    },
+    "compose-graphics": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/compose-graphics/SKILL.md",
+      "computedHash": "d66a7bec6ec14e0c72fb5323fc16214563ea4db5a78caa63ada9198a92faaa36"
+    },
+    "compose-motion": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/compose-motion/SKILL.md",
+      "computedHash": "829aedda96823993cbfefc082109cfa49ca75fcda2b760729e45343653bb98eb"
+    },
+    "compose-multiplatform": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/compose-multiplatform/SKILL.md",
+      "computedHash": "875845f97d420c2cd449faf25499a679e84e25afaa1e593c6af0b18b7c82f1a9"
+    },
+    "css-native": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/css-native/SKILL.md",
+      "computedHash": "dd065ae06cdbe860bead39293a9cd7a2057e29732b5afed907c6abeb02548826"
+    },
+    "design-audit": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/design-audit/SKILL.md",
+      "computedHash": "582245a393ac788142e32bf77ba2cc22c2665702fef225ebbaa0fb46bfc6de50"
+    },
+    "design-dna": {
+      "source": "zanwei/design-dna",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "424622959df02c2957430bd211d2d058eb672bd43f91f48acc5031d2652a2903"
+    },
+    "desktop-principles": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/desktop-principles/SKILL.md",
+      "computedHash": "c14773d21f21e511dfccccfc81e0eac1bc6847f25da334f4a539bac344382698"
+    },
+    "framer-motion": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/framer-motion/SKILL.md",
+      "computedHash": "b3331e4cdf93793d1a634d11e75b546e85e2a68de0919f7df7784eb38a2cc0ac"
+    },
+    "gsap": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/gsap/SKILL.md",
+      "computedHash": "b1a82c07539f2b5eda06a76796a6cf68f21dab4c8482963a43b6e28f8da47fd0"
+    },
+    "mobile-principles": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/mobile-principles/SKILL.md",
+      "computedHash": "5601b59eb4bbbe9390681df6b9482d325b37d13a4ec50bd2125c4212c4355534"
+    },
+    "motion-design": {
+      "source": "LottieFiles/motion-design-skill",
+      "sourceType": "github",
+      "skillPath": "skills/motion-design/SKILL.md",
+      "computedHash": "4f16f46c81f25a2a25b7a4720b7ea001e65f384b31b5b7f4b455fef87fbc9016"
+    },
+    "motion-principles": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/motion-principles/SKILL.md",
+      "computedHash": "0dc0f79bd08f43cf7295ddea932d00e26f6e71344bc38b7409eda4fd4507d91e"
+    },
+    "paint": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/paint/SKILL.md",
+      "computedHash": "2d31d53a3d3e64aef8f8636bcd50160c503220b7ba3c86dcc2ac448d13af784a"
+    },
+    "swiftui-graphics": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/swiftui-graphics/SKILL.md",
+      "computedHash": "50b1e4631ed75f38bdeeffc52f4c5f7f9fe6cb7498061f2bbe8b6f90e3c4798f"
+    },
+    "swiftui-motion": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/swiftui-motion/SKILL.md",
+      "computedHash": "6dcad58969a14df5110a84b84a9ad126d56b0e380fa415d92926bff3f0a3d857"
+    },
+    "threejs-r3f": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/threejs-r3f/SKILL.md",
+      "computedHash": "5bcaec10fa77642bb213ec750ed69ed28a7d76372e7876a3224bd355cfa62f96"
+    },
+    "ui-ux-pro-max": {
+      "source": "AThevon/genjutsu",
+      "sourceType": "github",
+      "skillPath": "skills/_jutsu/ui-ux-pro-max/SKILL.md",
+      "computedHash": "ca7486b0de17f203720f762ba02afd40f6b3fc69153da38a2f91b3da9eeaf89a"
+    }
+  }
+}
