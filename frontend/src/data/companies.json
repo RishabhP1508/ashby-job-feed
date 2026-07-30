@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T22:52:50Z",
+  "generatedAt": "2026-07-30T23:18:46Z",
   "industries": [
     "AI",
     "Aerospace",
@@ -319,6 +319,14 @@
       "jobCount": 8
     },
     {
+      "name": "Bunny.net",
+      "slug": "bunny",
+      "industries": [
+        "Infrastructure"
+      ],
+      "jobCount": 1
+    },
+    {
       "name": "Captions",
       "slug": "mirage",
       "industries": [
@@ -350,15 +358,6 @@
         "Marketing"
       ],
       "jobCount": 0
-    },
-    {
-      "name": "Cedar",
-      "slug": "cedar",
-      "industries": [
-        "Fintech",
-        "Healthcare"
-      ],
-      "jobCount": 3
     },
     {
       "name": "Cerebras",
@@ -394,6 +393,15 @@
         "DevTools"
       ],
       "jobCount": 3
+    },
+    {
+      "name": "Chroma",
+      "slug": "trychroma",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 1
     },
     {
       "name": "Chronosphere",
@@ -1041,6 +1049,15 @@
       "jobCount": 1
     },
     {
+      "name": "Hims & Hers",
+      "slug": "hims-and-hers",
+      "industries": [
+        "Consumer",
+        "Healthcare"
+      ],
+      "jobCount": 97
+    },
+    {
       "name": "Humaans",
       "slug": "humaans",
       "industries": [
@@ -1099,6 +1116,14 @@
         "Biotech"
       ],
       "jobCount": 14
+    },
+    {
+      "name": "Ironclad",
+      "slug": "ironcladhq",
+      "industries": [
+        "Legal"
+      ],
+      "jobCount": 32
     },
     {
       "name": "Iterable",
@@ -1244,14 +1269,6 @@
         "Education"
       ],
       "jobCount": 194
-    },
-    {
-      "name": "Levels",
-      "slug": "levels",
-      "industries": [
-        "Health & Wellness"
-      ],
-      "jobCount": 2
     },
     {
       "name": "Lightdash",
@@ -1975,15 +1992,6 @@
       "jobCount": 23
     },
     {
-      "name": "Runway",
-      "slug": "runway",
-      "industries": [
-        "AI",
-        "Design"
-      ],
-      "jobCount": 4
-    },
-    {
       "name": "Sailor Health",
       "slug": "sailorhealth",
       "industries": [
@@ -2441,6 +2449,14 @@
         "Marketing"
       ],
       "jobCount": 5
+    },
+    {
+      "name": "Uniswap Labs",
+      "slug": "uniswap",
+      "industries": [
+        "Web3"
+      ],
+      "jobCount": 6
     },
     {
       "name": "Unit",

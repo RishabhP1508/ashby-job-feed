@@ -1,11 +1,11 @@
 # Ashby board validation report
 
-Generated 2026-07-30T22:52:50Z. Run was clean.
+Generated 2026-07-30T23:18:46Z. Run was clean.
 
 ## Headline
 
-- **shipped**: 308 companies in `frontend/src/data/companies.json`
-- **found**: 347 (shipped plus withheld plus Ashby-seen-but-unresolved)
+- **shipped**: 310 companies in `frontend/src/data/companies.json`
+- **found**: 344 (shipped plus withheld plus Ashby-seen-but-unresolved)
 
 `found` is the measure of pipeline health. The acceptance gate withholds real
 boards on purpose, so a gap between found and shipped means corroboration is
@@ -15,20 +15,20 @@ failing, not that the pipeline is broken. Those need opposite fixes.
 
 - probed companies: 816
 - confirmed boards still live: 21 of 23
-- found by exact-name slug: 264
+- found by exact-name slug: 261
 - found by derived slug, named tier (ungated): 2
 - found by derived slug, cross-confirmed: 8
 - found by careers-page scrape: 13
-- shipped by manual override: 0
-- withheld, derived slug unconfirmed: 23
+- shipped by manual override: 5
+- withheld, derived slug unconfirmed: 18
 - Ashby confirmed, slug unresolved: 16
 - not found: 467
 - confirmed slug now dead: 2
 - error, unresolved: 0
 - shipped with 0 open roles: 36
-- rejected by override: 0
+- rejected by override: 3
 
-Timing: pass 1 0s, pass 2 304s
+Timing: pass 1 0s, pass 2 303s
 
 ## Verify by eye
 
@@ -66,20 +66,14 @@ with nursing roles means the wrong board was grabbed.
   - Enterprise Support Engineer (Customer Experience)
 - **Depot** -> `depot` (2 roles)
   - Staff Software Engineer (Engineering); Head of Developer Growth Marketing (Marketing)
-- **Levels** -> `levels` (2 roles)
-  - Software Engineer (UK - Non London) (Levels Technologies Ltd); Mid Full Stack / Backend Engineer (Levels Technologies Ltd)
 - **Maven** -> `maven` (2 roles)
   - Senior/Staff Software Engineer (Engineering); Principal Designer (Product)
 - **Tango** -> `tango` (2 roles)
   - Keep me in mind! (Engineering); Senior Product Manager (Product)
 - **Zed** -> `zed` (2 roles)
   - Open Source Engineer (Engineering); Designer (Engineering)
-- **Cedar** -> `cedar` (3 roles)
-  - Cedar Home Advisor (Sales & Marketing); Head of Transaction Support and Admin (Legal and Compliance); Mid Level Front End Engineer (Product and Technology)
 - **Knock** -> `knock` (3 roles)
   - Engineering Manager, Platform (Engineering); DevOps Engineer (Engineering); Infrastructure Engineer (Engineering)
-- **Runway** -> `runway` (4 roles)
-  - ⚙️ Senior/Staff Platform Engineer (EPD); ⚙️ Senior/Staff Product Engineer (EPD); 📈 Forward Deployed Finance Partner (Go-To-Market)
 - **Jack & Jill** -> `jack-jill-external-ats` (5 roles) [found on jackandjill.ai]
   - Founding Engineer (£240k+ ) (Engineering); Founding Designer (£180k+) (Engineering); Founding GTM Operator (£150k+) (GTM)
 - **Regard** -> `regard` (5 roles)
@@ -206,13 +200,9 @@ A live board was found but the slug is a derived variant and the careers page di
 - **Arrive Logistics** -> `arrive` (careers page did not corroborate the derived slug)
 - **AssemblyAI** -> `assembly` (careers page did not corroborate the derived slug)
 - **Axiom Space** -> `axiom` (careers page did not corroborate the derived slug)
-- **Bunny.net** -> `bunny` (careers page did not corroborate the derived slug)
-- **Chroma** -> `trychroma` (careers page did not corroborate the derived slug)
 - **Generate Biomedicines** -> `generate` (careers page did not corroborate the derived slug)
-- **Hims & Hers** -> `hims-and-hers` (careers page did not corroborate the derived slug)
 - **Impulse Space** -> `impulse` (careers page did not corroborate the derived slug)
 - **Incident.io** -> `incident` (careers page did not corroborate the derived slug)
-- **Ironclad** -> `ironcladhq` (careers page did not corroborate the derived slug)
 - **Ledger Investing** -> `ledger` (careers page did not corroborate the derived slug)
 - **Lighthouse** -> `lighthousehq` (careers page did not corroborate the derived slug)
 - **Orca Security** -> `orca` (careers page did not corroborate the derived slug)
@@ -224,7 +214,6 @@ A live board was found but the slug is a derived variant and the careers page di
 - **Sanctuary AI** -> `sanctuary` (careers page did not corroborate the derived slug)
 - **Terra CO2** -> `terra` (careers page did not corroborate the derived slug)
 - **Trunk Tools** -> `trunk` (careers page did not corroborate the derived slug)
-- **Uniswap Labs** -> `uniswap` (careers page did not corroborate the derived slug)
 - **Velocity Global** -> `velocity` (careers page did not corroborate the derived slug)
 
 ## Ashby confirmed, slug unresolved
@@ -265,7 +254,9 @@ These known-good slugs stopped resolving.
 
 Excluded on purpose.
 
-_none_
+- **Cedar** -> `cedar` (manual override)
+- **Levels** -> `levels` (manual override)
+- **Runway** -> `runway` (manual override)
 
 ## Resolved only by scraping
 
@@ -308,30 +299,30 @@ Final list after merges and drops.
 - Biotech: 9
 - Climate: 7
 - Construction: 6
-- Consumer: 12
+- Consumer: 13
 - Cybersecurity: 26
 - Defense: 6
-- Design: 7
+- Design: 6
 - DevTools: 61
 - Education: 16
 - Energy: 8
-- Fintech: 33
+- Fintech: 32
 - Food: 4
 - Gaming: 3
 - HR & Recruiting: 11
 - Hardware: 8
-- Health & Wellness: 7
+- Health & Wellness: 6
 - Healthcare: 21
-- Infrastructure: 29
+- Infrastructure: 31
 - Insurance: 4
-- Legal: 4
+- Legal: 5
 - Logistics & Transportation: 5
 - Marketing: 16
 - Marketplace: 6
 - Productivity: 24
 - Real Estate: 3
 - Robotics: 7
-- Web3: 9
+- Web3: 10
 
 ### Merges and drops applied
 
@@ -360,5 +351,12 @@ A slug owned by a confirmed company is stripped from every other candidate list,
 
 ## Manual overrides applied
 
-_none_
+- shipped Chroma -> `trychroma` (1 roles)
+- shipped Hims & Hers -> `hims-and-hers` (97 roles)
+- shipped Ironclad -> `ironcladhq` (32 roles)
+- shipped Bunny.net -> `bunny` (1 roles)
+- shipped Uniswap Labs -> `uniswap` (6 roles)
+- rejected Runway
+- rejected Cedar
+- rejected Levels
 
