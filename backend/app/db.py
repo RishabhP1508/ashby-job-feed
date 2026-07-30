@@ -32,7 +32,11 @@ from sqlalchemy.orm import (
 
 
 def _database_url() -> str:
-    url = os.getenv("DATABASE_URL", "sqlite:///./data/app.db")
+    url = os.getenv("DATABASE_URL")
+    if not url:
+        # Anchor the dev database to backend/ so alembic (run from backend/) and
+        # uvicorn (run from the repo root) open one file instead of two.
+        return "sqlite:///" + (Path(__file__).resolve().parents[1] / "data" / "app.db").as_posix()
     # Managed Postgres providers often hand out postgres:// URLs;
     # SQLAlchemy expects the postgresql+psycopg2:// form.
     if url.startswith("postgres://"):
@@ -82,7 +86,8 @@ class SavedSearch(Base):
     signature: Mapped[str] = mapped_column(String(64))
     companies: Mapped[str] = mapped_column(Text)
     filters: Mapped[str] = mapped_column(Text)
-    use_count: Mapped[int] = mapped_column(default=1)
+    # Counts reopens only, so a search starts at 0 until it is reopened.
+    use_count: Mapped[int] = mapped_column(default=0)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     last_used_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     user: Mapped["User"] = relationship(back_populates="searches")
@@ -179,7 +184,7 @@ def save_search(
         )
     ).scalar_one_or_none()
     if existing is not None:
-        existing.use_count += 1
+        # Re-saving is not reopening, so use_count stays put.
         existing.last_used_at = now
         if name.strip():
             existing.name = name.strip()
@@ -193,7 +198,7 @@ def save_search(
         signature=sig,
         companies=json.dumps(companies),
         filters=json.dumps(filters),
-        use_count=1,
+        use_count=0,
         created_at=now,
         last_used_at=now,
     )

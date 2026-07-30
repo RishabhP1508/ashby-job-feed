@@ -1,6 +1,6 @@
 # Ashby job feed
 
-![CI](https://github.com/USERNAME/ashby-job-feed/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/RishabhP1508/ashby-job-feed/actions/workflows/ci.yml/badge.svg)
 
 A small full-stack app that reads any company's public [Ashby](https://www.ashbyhq.com/) job board, merges several companies into one list, and filters roles by when they were posted, their location, team, and type. You apply straight from the list, and you can save a set of companies and filters to reopen later.
 
@@ -112,7 +112,7 @@ ruff check .
 pytest
 ```
 
-GitHub Actions runs the same lint and tests, plus the frontend build, on every push and pull request (`.github/workflows/ci.yml`). Replace `USERNAME` in the badge URL at the top of this file with your GitHub username so the badge points at your repository.
+GitHub Actions runs the same lint and tests, plus the frontend typecheck, unit tests, and build, on every push and pull request (`.github/workflows/ci.yml`).
 
 ## Deploy
 
@@ -120,17 +120,18 @@ The code lives on GitHub; a live demo needs a host that can run Python. The simp
 
 Because there are accounts now, production needs durable storage and a signing secret. Set `DATABASE_URL` to a PostgreSQL connection string (Render, Neon, and Supabase all offer managed Postgres), `JWT_SECRET` to a long random value, and `COOKIE_SECURE=true` so the session cookie is only sent over HTTPS. The default SQLite file is for local development only: on a host with an ephemeral filesystem it resets on redeploy, which would wipe every account, so it is not enough once people can log in.
 
-The schema is managed with Alembic. On a Docker deploy the container runs `alembic upgrade head` on start, so tables are created and kept current with no manual step. When you change a model, add a migration with `alembic revision --autogenerate -m "describe it"` from the `backend` directory, commit it, and it applies on the next deploy. Local development skips this: against the throwaway SQLite file the app just creates the tables on startup. See DEPLOYMENT.md for the full walkthrough on Render with Neon Postgres.
+The schema is managed with Alembic. On a Docker deploy the container runs `alembic upgrade head` on start, so tables are created and kept current with no manual step. When you change a model, add a migration with `alembic revision --autogenerate -m "describe it"` from the `backend` directory, commit it, and it applies on the next deploy. Local development skips this: against the throwaway SQLite file the app just creates the tables on startup. See [DEPLOYMENT.md](DEPLOYMENT.md) for the full walkthrough on Render with Neon Postgres.
 
-To run the frontend and backend as separate services instead, deploy the backend on its own, build the frontend with `VITE_API_BASE` set to the backend URL, and set `ALLOWED_ORIGINS` on the backend to the frontend's origin. A split deploy makes the cookie cross-site, so the browser needs it marked `SameSite=None; Secure`; a single service keeps everything same-origin and avoids that.
+To run the frontend and backend as separate services instead, deploy the backend on its own, build the frontend with `VITE_API_BASE` set to the backend URL, and set `ALLOWED_ORIGINS` on the backend to the frontend's origin. A split deploy makes the cookie cross-site, so set `COOKIE_SAMESITE=none` and `COOKIE_SECURE=true` on the backend; a single service keeps everything same-origin and avoids that.
 
 ## Configuration
 
 | Variable        | Default                 | Purpose                                                     |
 | --------------- | ----------------------- | ----------------------------------------------------------- |
-| DATABASE_URL    | sqlite:///./data/app.db | Database connection. Use a PostgreSQL URL in production.     |
-| JWT_SECRET      | (dev fallback)          | Secret for signing session tokens. Set a long random value. |
+| DATABASE_URL    | backend/data/app.db     | Database connection. Use a PostgreSQL URL in production.     |
+| JWT_SECRET      | (dev fallback)          | Secret for signing session tokens. Set a long random value. Required: the app refuses to start on a production-like deploy without it. |
 | COOKIE_SECURE   | false                   | Set true in production so the session cookie is HTTPS-only.  |
+| COOKIE_SAMESITE | lax                     | Session cookie SameSite. Use none for a split deploy, which also forces Secure. |
 | TOKEN_TTL_HOURS | 168                     | Session lifetime in hours (default 7 days).                 |
 | CACHE_TTL       | 300                     | Seconds to cache each board.                                |
 | ALLOWED_ORIGINS | *                       | Comma-separated CORS origins for the API.                   |

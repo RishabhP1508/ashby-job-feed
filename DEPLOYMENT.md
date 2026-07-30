@@ -85,17 +85,16 @@ git commit -m "Ashby job feed with accounts and saved searches"
 Create a new empty repository on GitHub with no README, license, or .gitignore, since the project already has them. Then connect and push using the commands GitHub shows, along the lines of:
 
 ```bash
-git remote add origin https://github.com/YOURNAME/ashby-job-feed.git
+git remote add origin https://github.com/RishabhP1508/ashby-job-feed.git
 git branch -M main
 git push -u origin main
 ```
 
 If Git asks for a password, GitHub wants a personal access token, not your account password. Create one under Settings, Developer settings, personal access tokens, and use it as the password.
 
-Two follow-ups:
+One follow-up:
 
-- In `README.md`, replace `USERNAME` in the CI badge URL with your GitHub username so the badge points at your repository.
-- Open the Actions tab and confirm the workflow runs green. It installs the dependencies and runs the backend tests against SQLite plus the frontend build, so a green check means the parts that can't run offline actually pass. If it's red, open the failing job and read the first error line.
+- Open the Actions tab and confirm the workflow runs green. It installs the dependencies and runs the backend tests against SQLite plus the frontend typecheck, unit tests, and build, so a green check means the parts that can't run offline actually pass. If it's red, open the failing job and read the first error line.
 
 ## Step 4: Deploy on Render
 
@@ -105,6 +104,8 @@ Two follow-ups:
    - `DATABASE_URL`: the Neon pooled connection string from Step 2.
    - `JWT_SECRET`: a long random value. Generate one with `python -c "import secrets; print(secrets.token_urlsafe(48))"` and paste the output.
    - `COOKIE_SECURE`: `true`. Render serves over HTTPS, so the session cookie should be HTTPS-only.
+
+   A split deploy (frontend and backend on separate origins) also needs `COOKIE_SAMESITE=none` and `COOKIE_SECURE=true`, otherwise the browser drops the cross-site session cookie. `COOKIE_SAMESITE` must be exactly `lax`, `strict`, or `none`; any other value falls back to `lax`.
 4. Set the health check path to `/api/health` so Render knows when the service is up.
 5. Create the service. The first build takes a few minutes: it builds the frontend, then the Python image. When it's live, Render gives you a URL.
 

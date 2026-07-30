@@ -63,7 +63,7 @@ def test_searches_crud_when_logged_in(client):
 
     used = client.post(f"/api/searches/{sid}/use")
     assert used.status_code == 200
-    assert used.json()["useCount"] == 2
+    assert used.json()["useCount"] == 1
 
     assert client.delete(f"/api/searches/{sid}").status_code == 200
     assert client.post(f"/api/searches/{sid}/use").status_code == 404

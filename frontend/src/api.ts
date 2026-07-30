@@ -80,7 +80,8 @@ export async function saveSearch(input: {
 }
 
 export async function useSearch(id: number): Promise<void> {
-  await fetch(`${BASE}/api/searches/${id}/use`, { method: 'POST', credentials: 'include' })
+  const res = await fetch(`${BASE}/api/searches/${id}/use`, { method: 'POST', credentials: 'include' })
+  if (!res.ok) throw new Error(await errText(res))
 }
 
 export async function deleteSearch(id: number): Promise<void> {

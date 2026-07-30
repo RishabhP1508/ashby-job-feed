@@ -32,5 +32,9 @@ jobs:
         with:
           node-version: "20"
       - run: npm install
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Test
+        run: npm run test
       - name: Build
         run: npm run build

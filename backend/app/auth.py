@@ -13,13 +13,34 @@ import jwt
 from fastapi import Depends, HTTPException, Request, Response
 from sqlalchemy.orm import Session
 
-from .db import User, get_session
+from .db import DATABASE_URL, User, get_session
 
-JWT_SECRET = os.getenv("JWT_SECRET", "dev-insecure-secret-change-me")
+DEV_SECRET = "dev-insecure-secret-change-me"
+# `or` rather than a getenv default, so JWT_SECRET="" counts as unset too.
+JWT_SECRET = os.getenv("JWT_SECRET") or DEV_SECRET
 JWT_ALG = "HS256"
 TOKEN_TTL_HOURS = int(os.getenv("TOKEN_TTL_HOURS", "168"))  # 7 days
 COOKIE_NAME = "session"
-COOKIE_SECURE = os.getenv("COOKIE_SECURE", "false").lower() == "true"
+
+# A split deploy makes the session cookie cross-site, which needs SameSite=None.
+# Unrecognized values fall back to "lax": a typo should not quietly emit a
+# cookie the browser refuses.
+_SAMESITE = os.getenv("COOKIE_SAMESITE", "lax").lower()
+COOKIE_SAMESITE = _SAMESITE if _SAMESITE in {"lax", "strict", "none"} else "lax"
+# Browsers reject SameSite=None unless the cookie is also Secure.
+COOKIE_SECURE = os.getenv("COOKIE_SECURE", "false").lower() == "true" or COOKIE_SAMESITE == "none"
+
+
+def check_signing_secret() -> None:
+    """Refuse to start a production-like deploy that still uses the dev secret."""
+    if JWT_SECRET != DEV_SECRET:
+        return
+    if not DATABASE_URL.startswith("sqlite") or COOKIE_SECURE:
+        raise RuntimeError(
+            "JWT_SECRET is unset or still the dev default, but this looks like a "
+            "production deploy. Set JWT_SECRET to a long random value: "
+            'python -c "import secrets; print(secrets.token_urlsafe(48))"'
+        )
 
 
 def hash_password(password: str) -> str:
@@ -45,14 +66,22 @@ def set_auth_cookie(response: Response, token: str) -> None:
         token,
         httponly=True,
         secure=COOKIE_SECURE,
-        samesite="lax",
+        samesite=COOKIE_SAMESITE,
         max_age=TOKEN_TTL_HOURS * 3600,
         path="/",
     )
 
 
 def clear_auth_cookie(response: Response) -> None:
-    response.delete_cookie(COOKIE_NAME, path="/")
+    # The deletion cookie has to carry the same attributes as the one it
+    # replaces, or a cross-site browser ignores it and the session survives.
+    response.delete_cookie(
+        COOKIE_NAME,
+        path="/",
+        httponly=True,
+        secure=COOKIE_SECURE,
+        samesite=COOKIE_SAMESITE,
+    )
 
 
 def _user_id_from_token(token: str | None) -> int | None:

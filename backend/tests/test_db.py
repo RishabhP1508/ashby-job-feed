@@ -20,17 +20,17 @@ def user(session):
 
 def test_save_and_get(session, user):
     row = db.save_search(session, user.id, "OpenAI", ["openai"], {"datePreset": "7"})
-    assert row["useCount"] == 1
+    assert row["useCount"] == 0
     assert row["companies"] == ["openai"]
     listed = db.list_searches(session, user.id, "recent")
     assert len(listed) == 1
     assert listed[0]["name"] == "OpenAI"
 
 
-def test_identical_search_dedupes_and_bumps(session, user):
+def test_identical_search_dedupes_without_counting_a_reopen(session, user):
     db.save_search(session, user.id, "A", ["openai", "ramp"], {"x": 1})
     row = db.save_search(session, user.id, "B", ["ramp", "openai"], {"x": 1})
-    assert row["useCount"] == 2
+    assert row["useCount"] == 0
     assert row["name"] == "B"
     assert len(db.list_searches(session, user.id, "recent")) == 1
 
@@ -39,8 +39,8 @@ def test_recent_and_popular_ordering(session, user):
     a = db.save_search(session, user.id, "A", ["openai"], {})
     b = db.save_search(session, user.id, "B", ["ramp"], {})
     assert [r["id"] for r in db.list_searches(session, user.id, "recent")] == [b["id"], a["id"]]
-    db.touch_search(session, user.id, a["id"])
-    db.touch_search(session, user.id, a["id"])
+    assert db.touch_search(session, user.id, a["id"])["useCount"] == 1
+    assert db.touch_search(session, user.id, a["id"])["useCount"] == 2
     assert db.list_searches(session, user.id, "popular")[0]["id"] == a["id"]
 
 

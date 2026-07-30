@@ -38,6 +38,7 @@ from sqlalchemy.orm import Session
 from . import db
 from .ashby import fetch_board
 from .auth import (
+    check_signing_secret,
     clear_auth_cookie,
     current_user,
     hash_password,
@@ -53,6 +54,7 @@ from .ratelimit import RateLimiter
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncIterator[None]:
+    check_signing_secret()
     # Local SQLite is a throwaway dev database, so create tables on the fly.
     # Postgres (production) is migrated with Alembic (`alembic upgrade head`).
     if db.DATABASE_URL.startswith("sqlite"):
@@ -67,7 +69,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=_origins or ["*"],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "DELETE"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 

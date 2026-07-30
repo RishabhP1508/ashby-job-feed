@@ -4,6 +4,8 @@ __pycache__/
 .venv/
 venv/
 .env
+.agents/
+.claude/
 
 # node
 node_modules/
@@ -15,3 +17,5 @@ dist/
 # local database
 backend/data/
 *.db
+
+preview-1-dark-devtool.html
