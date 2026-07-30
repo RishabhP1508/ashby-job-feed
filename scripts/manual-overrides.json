@@ -1,0 +1,5 @@
+{
+  "$comment": "Manual review decisions applied by scripts/validate_boards.py after probing. 'ship' forces a company into companies.json regardless of the acceptance gate, keyed by the exact seed name; the slug is validated against the posting API first, so a dead slug is reported as an error rather than passing silently. 'reject' excludes a company even if it resolved, which is how a wrong-board grab gets killed. A name matching no seed entry is reported as an error. This is how the 'derived slug, unconfirmed' queue in validation-report.md gets back into the data without hand-editing generated output.",
+  "ship": {},
+  "reject": []
+}

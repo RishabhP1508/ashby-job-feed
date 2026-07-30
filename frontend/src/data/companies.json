@@ -1,0 +1,2631 @@
+{
+  "generatedAt": "2026-07-30T22:18:41Z",
+  "industries": [
+    "AI",
+    "Analytics",
+    "Biotech",
+    "Climate",
+    "Construction",
+    "Consumer",
+    "Cybersecurity",
+    "Defense",
+    "Design",
+    "DevTools",
+    "Education",
+    "Energy",
+    "Fintech",
+    "HR & Recruiting",
+    "Hardware",
+    "Health & Wellness",
+    "Healthcare",
+    "Infrastructure",
+    "Marketing",
+    "Marketplace",
+    "Productivity",
+    "Robotics",
+    "Web3"
+  ],
+  "companies": [
+    {
+      "name": "1Password",
+      "slug": "1password",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 66
+    },
+    {
+      "name": "1X",
+      "slug": "1x",
+      "industries": [
+        "Robotics"
+      ],
+      "jobCount": 80
+    },
+    {
+      "name": "Abridge",
+      "slug": "abridge",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 43
+    },
+    {
+      "name": "Absci",
+      "slug": "absci",
+      "industries": [
+        "AI",
+        "Biotech"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Aescape",
+      "slug": "aescape",
+      "industries": [
+        "Health & Wellness",
+        "Robotics"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Airbyte",
+      "slug": "airbyte",
+      "industries": [
+        "Analytics",
+        "DevTools"
+      ],
+      "jobCount": 11
+    },
+    {
+      "name": "Airtable",
+      "slug": "airtable",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Airwallex",
+      "slug": "airwallex",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 617
+    },
+    {
+      "name": "Alchemy",
+      "slug": "alchemy",
+      "industries": [
+        "DevTools",
+        "Web3"
+      ],
+      "jobCount": 17
+    },
+    {
+      "name": "Ambience Healthcare",
+      "slug": "ambiencehealthcare",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 22
+    },
+    {
+      "name": "Amplitude",
+      "slug": "amplitude",
+      "industries": [
+        "Analytics"
+      ],
+      "jobCount": 43
+    },
+    {
+      "name": "Antares",
+      "slug": "antares",
+      "industries": [
+        "Defense",
+        "Energy"
+      ],
+      "jobCount": 43
+    },
+    {
+      "name": "Anyone AI",
+      "slug": "anyone-ai",
+      "industries": [
+        "AI",
+        "Education"
+      ],
+      "jobCount": 202
+    },
+    {
+      "name": "Anyscale",
+      "slug": "anyscale",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 21
+    },
+    {
+      "name": "Apex Space",
+      "slug": "apex-technology-inc",
+      "industries": [
+        "Defense"
+      ],
+      "jobCount": 92
+    },
+    {
+      "name": "Apollo GraphQL",
+      "slug": "apollo-graphql",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 12
+    },
+    {
+      "name": "Applied Intuition",
+      "slug": "applied",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 268
+    },
+    {
+      "name": "Arca Wealth",
+      "slug": "arca",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 11
+    },
+    {
+      "name": "Arcade",
+      "slug": "arcade",
+      "industries": [
+        "Marketing",
+        "Productivity"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Artisan",
+      "slug": "artisan",
+      "industries": [
+        "AI",
+        "Marketing"
+      ],
+      "jobCount": 10
+    },
+    {
+      "name": "Ashby",
+      "slug": "ashby",
+      "industries": [
+        "HR & Recruiting"
+      ],
+      "jobCount": 57
+    },
+    {
+      "name": "Astronomer",
+      "slug": "astronomer",
+      "industries": [
+        "Analytics",
+        "Infrastructure"
+      ],
+      "jobCount": 28
+    },
+    {
+      "name": "Attio",
+      "slug": "attio",
+      "industries": [
+        "Marketing",
+        "Productivity"
+      ],
+      "jobCount": 37
+    },
+    {
+      "name": "Aurora Solar",
+      "slug": "aurorasolar",
+      "industries": [
+        "Energy"
+      ],
+      "jobCount": 8
+    },
+    {
+      "name": "Base Power",
+      "slug": "base-power",
+      "industries": [
+        "Energy"
+      ],
+      "jobCount": 165
+    },
+    {
+      "name": "Baseten",
+      "slug": "baseten",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 62
+    },
+    {
+      "name": "Benchling",
+      "slug": "benchling",
+      "industries": [
+        "Biotech",
+        "DevTools"
+      ],
+      "jobCount": 51
+    },
+    {
+      "name": "Bild AI",
+      "slug": "bild-ai",
+      "industries": [
+        "AI",
+        "Construction"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Blackbird",
+      "slug": "blackbird-labs-inc",
+      "industries": [
+        "Web3"
+      ],
+      "jobCount": 9
+    },
+    {
+      "name": "Bland AI",
+      "slug": "bland",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 13
+    },
+    {
+      "name": "Braintrust",
+      "slug": "braintrust",
+      "industries": [
+        "AI",
+        "DevTools"
+      ],
+      "jobCount": 24
+    },
+    {
+      "name": "Brimstone",
+      "slug": "brimstone",
+      "industries": [
+        "Climate",
+        "Construction"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Brisk Teaching",
+      "slug": "brisk-teaching",
+      "industries": [
+        "AI",
+        "Education"
+      ],
+      "jobCount": 8
+    },
+    {
+      "name": "Captions",
+      "slug": "mirage",
+      "industries": [
+        "AI",
+        "Consumer"
+      ],
+      "jobCount": 9
+    },
+    {
+      "name": "Carbon Health",
+      "slug": "carbonhealth",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Cartesia",
+      "slug": "cartesia",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 28
+    },
+    {
+      "name": "Catalyst",
+      "slug": "catalyst",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Cedar",
+      "slug": "cedar",
+      "industries": [
+        "Fintech",
+        "Healthcare"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Cerebras",
+      "slug": "cerebras",
+      "industries": [
+        "AI",
+        "Hardware"
+      ],
+      "jobCount": 122
+    },
+    {
+      "name": "Chai Discovery",
+      "slug": "chaidiscovery",
+      "industries": [
+        "AI",
+        "Biotech"
+      ],
+      "jobCount": 14
+    },
+    {
+      "name": "Character AI",
+      "slug": "character",
+      "industries": [
+        "AI",
+        "Consumer"
+      ],
+      "jobCount": 13
+    },
+    {
+      "name": "Checkly",
+      "slug": "checkly",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Chronosphere",
+      "slug": "chronospherejobs",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Circleback",
+      "slug": "circleback",
+      "industries": [
+        "AI",
+        "Productivity"
+      ],
+      "jobCount": 11
+    },
+    {
+      "name": "Clay",
+      "slug": "claylabs",
+      "industries": [
+        "AI",
+        "Marketing"
+      ],
+      "jobCount": 68
+    },
+    {
+      "name": "Clerk",
+      "slug": "clerk",
+      "industries": [
+        "Cybersecurity",
+        "DevTools"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "ClickHouse",
+      "slug": "clickhouse",
+      "industries": [
+        "Analytics",
+        "Infrastructure"
+      ],
+      "jobCount": 166
+    },
+    {
+      "name": "ClickUp",
+      "slug": "clickup",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 64
+    },
+    {
+      "name": "CodaMetrix",
+      "slug": "codametrix",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Coder",
+      "slug": "coder",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 18
+    },
+    {
+      "name": "Cognition",
+      "slug": "cognition",
+      "industries": [
+        "AI",
+        "DevTools"
+      ],
+      "jobCount": 79
+    },
+    {
+      "name": "Cohere",
+      "slug": "cohere",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 139
+    },
+    {
+      "name": "Column",
+      "slug": "column",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 23
+    },
+    {
+      "name": "Common Room",
+      "slug": "commonroom",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 10
+    },
+    {
+      "name": "Commure",
+      "slug": "commure",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 70
+    },
+    {
+      "name": "CompanyCam",
+      "slug": "companycam",
+      "industries": [
+        "Construction",
+        "Productivity"
+      ],
+      "jobCount": 11
+    },
+    {
+      "name": "ConductorOne",
+      "slug": "C1",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 13
+    },
+    {
+      "name": "Confluent",
+      "slug": "confluent",
+      "industries": [
+        "Analytics",
+        "Infrastructure"
+      ],
+      "jobCount": 33
+    },
+    {
+      "name": "Convex",
+      "slug": "convex-dev",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 8
+    },
+    {
+      "name": "Corti",
+      "slug": "corti",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Cradle Bio",
+      "slug": "cradlebio",
+      "industries": [
+        "AI",
+        "Biotech"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Crosby",
+      "slug": "crosby",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 20
+    },
+    {
+      "name": "Crusoe",
+      "slug": "crusoe",
+      "industries": [
+        "Energy",
+        "Infrastructure"
+      ],
+      "jobCount": 360
+    },
+    {
+      "name": "Cyberhaven",
+      "slug": "cyberhaven",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 13
+    },
+    {
+      "name": "David AI",
+      "slug": "david-ai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 11
+    },
+    {
+      "name": "Decagon",
+      "slug": "decagon",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 115
+    },
+    {
+      "name": "Deel",
+      "slug": "deel",
+      "industries": [
+        "HR & Recruiting"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Deepgram",
+      "slug": "deepgram",
+      "industries": [
+        "AI",
+        "DevTools"
+      ],
+      "jobCount": 77
+    },
+    {
+      "name": "Deliveroo",
+      "slug": "deliveroo",
+      "industries": [
+        "Consumer"
+      ],
+      "jobCount": 182
+    },
+    {
+      "name": "Depot",
+      "slug": "depot",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Docker",
+      "slug": "docker",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 58
+    },
+    {
+      "name": "Doctolib",
+      "slug": "doctolib",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 160
+    },
+    {
+      "name": "Doppler",
+      "slug": "doppler",
+      "industries": [
+        "Cybersecurity",
+        "DevTools"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Drata",
+      "slug": "drata",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 58
+    },
+    {
+      "name": "Dust",
+      "slug": "dust",
+      "industries": [
+        "AI",
+        "Productivity"
+      ],
+      "jobCount": 21
+    },
+    {
+      "name": "Dynamic",
+      "slug": "dynamic",
+      "industries": [
+        "DevTools",
+        "Web3"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "edu.fyi",
+      "slug": "fyi",
+      "industries": [
+        "Education"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "EGYM",
+      "slug": "egym",
+      "industries": [
+        "Health & Wellness"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "ElevenLabs",
+      "slug": "elevenlabs",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 220
+    },
+    {
+      "name": "Elicit",
+      "slug": "elicit",
+      "industries": [
+        "AI",
+        "Education"
+      ],
+      "jobCount": 10
+    },
+    {
+      "name": "EliseAI",
+      "slug": "eliseai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 103
+    },
+    {
+      "name": "Elliptic",
+      "slug": "elliptic",
+      "industries": [
+        "Cybersecurity",
+        "Web3"
+      ],
+      "jobCount": 30
+    },
+    {
+      "name": "Ello",
+      "slug": "ello",
+      "industries": [
+        "AI",
+        "Education"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Encord",
+      "slug": "encord",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 37
+    },
+    {
+      "name": "Eneba",
+      "slug": "eneba",
+      "industries": [
+        "Marketplace"
+      ],
+      "jobCount": 29
+    },
+    {
+      "name": "Enpal",
+      "slug": "enpal",
+      "industries": [
+        "Climate",
+        "Energy"
+      ],
+      "jobCount": 278
+    },
+    {
+      "name": "Etched",
+      "slug": "etched",
+      "industries": [
+        "AI",
+        "Hardware"
+      ],
+      "jobCount": 110
+    },
+    {
+      "name": "Extropic",
+      "slug": "extropic",
+      "industries": [
+        "AI",
+        "Hardware"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Fathom",
+      "slug": "fathom",
+      "industries": [
+        "AI",
+        "Productivity"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Fellow",
+      "slug": "fellow",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Fiddler AI",
+      "slug": "fiddler-ai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Figure",
+      "slug": "figure",
+      "industries": [
+        "Hardware",
+        "Robotics"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Fluidstack",
+      "slug": "fluidstack",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 314
+    },
+    {
+      "name": "Form Bio",
+      "slug": "formbio",
+      "industries": [
+        "Biotech",
+        "DevTools"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Form Energy",
+      "slug": "formenergy",
+      "industries": [
+        "Energy",
+        "Hardware"
+      ],
+      "jobCount": 177
+    },
+    {
+      "name": "Freed",
+      "slug": "freed",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Front",
+      "slug": "frontcareers",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 22
+    },
+    {
+      "name": "Funding Circle",
+      "slug": "fundingcircle",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 31
+    },
+    {
+      "name": "Gable",
+      "slug": "gable",
+      "industries": [
+        "AI",
+        "Analytics"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Gainsight",
+      "slug": "gainsight",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 20
+    },
+    {
+      "name": "Ghost",
+      "slug": "ghost",
+      "industries": [
+        "Consumer",
+        "DevTools"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "GitBook",
+      "slug": "gitbook",
+      "industries": [
+        "DevTools",
+        "Productivity"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Granola",
+      "slug": "granola",
+      "industries": [
+        "AI",
+        "Productivity"
+      ],
+      "jobCount": 16
+    },
+    {
+      "name": "Grow Therapy",
+      "slug": "grow-therapy",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 32
+    },
+    {
+      "name": "Guild",
+      "slug": "guild",
+      "industries": [
+        "Education"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Halter",
+      "slug": "halter",
+      "industries": [
+        "Robotics"
+      ],
+      "jobCount": 286
+    },
+    {
+      "name": "Handshake",
+      "slug": "handshake",
+      "industries": [
+        "Education",
+        "HR & Recruiting"
+      ],
+      "jobCount": 128
+    },
+    {
+      "name": "Harvey",
+      "slug": "harvey",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 346
+    },
+    {
+      "name": "Headway",
+      "slug": "headway",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 62
+    },
+    {
+      "name": "Hebbia",
+      "slug": "hebbia-ai",
+      "industries": [
+        "AI",
+        "Fintech"
+      ],
+      "jobCount": 26
+    },
+    {
+      "name": "Heirloom",
+      "slug": "heirloomcarbon",
+      "industries": [
+        "Climate"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Helion",
+      "slug": "helion",
+      "industries": [
+        "Energy"
+      ],
+      "jobCount": 110
+    },
+    {
+      "name": "Helm.ai",
+      "slug": "helm-ai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 9
+    },
+    {
+      "name": "Hex",
+      "slug": "hex",
+      "industries": [
+        "Analytics"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Higgsfield",
+      "slug": "higgsfieldai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 69
+    },
+    {
+      "name": "Higharc",
+      "slug": "higharc",
+      "industries": [
+        "Construction",
+        "Design"
+      ],
+      "jobCount": 27
+    },
+    {
+      "name": "Hightouch",
+      "slug": "hightouch",
+      "industries": [
+        "Analytics"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Humaans",
+      "slug": "humaans",
+      "industries": [
+        "HR & Recruiting"
+      ],
+      "jobCount": 16
+    },
+    {
+      "name": "Iambic Therapeutics",
+      "slug": "iambic-therapeutics",
+      "industries": [
+        "AI",
+        "Biotech"
+      ],
+      "jobCount": 19
+    },
+    {
+      "name": "Ideogram",
+      "slug": "ideogram",
+      "industries": [
+        "AI",
+        "Design"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Impact Networking",
+      "slug": "impact-networking",
+      "industries": [
+        "Infrastructure"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Infisical",
+      "slug": "infisical",
+      "industries": [
+        "Cybersecurity",
+        "DevTools"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Inngest",
+      "slug": "inngest",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Insitro",
+      "slug": "insitro",
+      "industries": [
+        "AI",
+        "Biotech"
+      ],
+      "jobCount": 14
+    },
+    {
+      "name": "Iterable",
+      "slug": "iterable",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 26
+    },
+    {
+      "name": "Jack & Jill",
+      "slug": "jack-jill-external-ats",
+      "industries": [
+        "AI",
+        "HR & Recruiting"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Juniper Square",
+      "slug": "junipersquare",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 41
+    },
+    {
+      "name": "Kalshi",
+      "slug": "kalshi",
+      "industries": [
+        "Fintech",
+        "Marketplace"
+      ],
+      "jobCount": 36
+    },
+    {
+      "name": "Kin",
+      "slug": "kin",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 20
+    },
+    {
+      "name": "Kit",
+      "slug": "kit",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Knock",
+      "slug": "knock",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Krea",
+      "slug": "krea",
+      "industries": [
+        "AI",
+        "Design"
+      ],
+      "jobCount": 12
+    },
+    {
+      "name": "Lambda",
+      "slug": "lambda",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 58
+    },
+    {
+      "name": "LanceDB",
+      "slug": "lancedb",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 9
+    },
+    {
+      "name": "LangChain",
+      "slug": "langchain",
+      "industries": [
+        "AI",
+        "DevTools"
+      ],
+      "jobCount": 91
+    },
+    {
+      "name": "LatchBio",
+      "slug": "latchbio",
+      "industries": [
+        "Biotech",
+        "DevTools"
+      ],
+      "jobCount": 15
+    },
+    {
+      "name": "LaunchDarkly",
+      "slug": "launchdarkly",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "lean.xyz",
+      "slug": "lean",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Leapsome",
+      "slug": "leapsome",
+      "industries": [
+        "HR & Recruiting"
+      ],
+      "jobCount": 19
+    },
+    {
+      "name": "Legora",
+      "slug": "legora",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 274
+    },
+    {
+      "name": "Leland",
+      "slug": "leland",
+      "industries": [
+        "Education"
+      ],
+      "jobCount": 194
+    },
+    {
+      "name": "Levels",
+      "slug": "levels",
+      "industries": [
+        "Health & Wellness"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Lightdash",
+      "slug": "lightdash",
+      "industries": [
+        "Analytics"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Lightspeed Commerce",
+      "slug": "lightspeedhq",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 152
+    },
+    {
+      "name": "LILT",
+      "slug": "lilt-corporate",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Linear",
+      "slug": "linear",
+      "industries": [
+        "DevTools",
+        "Productivity"
+      ],
+      "jobCount": 23
+    },
+    {
+      "name": "Liquid AI",
+      "slug": "liquid-ai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 19
+    },
+    {
+      "name": "LlamaIndex",
+      "slug": "llamaindex",
+      "industries": [
+        "AI",
+        "DevTools"
+      ],
+      "jobCount": 14
+    },
+    {
+      "name": "Loom",
+      "slug": "loom",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Luma AI",
+      "slug": "lumaai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 51
+    },
+    {
+      "name": "MagicSchool AI",
+      "slug": "magicschool",
+      "industries": [
+        "AI",
+        "Education"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Material Security",
+      "slug": "materialsecurity",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Materialize",
+      "slug": "materialize",
+      "industries": [
+        "Analytics",
+        "Infrastructure"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Maven",
+      "slug": "maven",
+      "industries": [
+        "Education"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Melio",
+      "slug": "melio",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Mercor",
+      "slug": "mercor",
+      "industries": [
+        "AI",
+        "HR & Recruiting"
+      ],
+      "jobCount": 77
+    },
+    {
+      "name": "Mercury",
+      "slug": "mercury",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Metaview",
+      "slug": "metaview",
+      "industries": [
+        "AI",
+        "HR & Recruiting"
+      ],
+      "jobCount": 34
+    },
+    {
+      "name": "Middesk",
+      "slug": "middesk",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 22
+    },
+    {
+      "name": "Mintlify",
+      "slug": "mintlify",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 19
+    },
+    {
+      "name": "Modal",
+      "slug": "modal",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 34
+    },
+    {
+      "name": "Modern Treasury",
+      "slug": "moderntreasury",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 8
+    },
+    {
+      "name": "Mosaic",
+      "slug": "mosaic",
+      "industries": [
+        "Construction"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "MotherDuck",
+      "slug": "motherduck",
+      "industries": [
+        "Analytics"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Multiverse",
+      "slug": "multiverse",
+      "industries": [
+        "Education",
+        "HR & Recruiting"
+      ],
+      "jobCount": 25
+    },
+    {
+      "name": "Multivista",
+      "slug": "multivista",
+      "industries": [
+        "Construction"
+      ],
+      "jobCount": 4
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n",
+      "industries": [
+        "DevTools",
+        "Productivity"
+      ],
+      "jobCount": 40
+    },
+    {
+      "name": "Nabla",
+      "slug": "nabla",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 14
+    },
+    {
+      "name": "Navattic",
+      "slug": "navattic",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Neon",
+      "slug": "neon",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Newfront",
+      "slug": "newfront",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Nightfall",
+      "slug": "nightfall-ai",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 22
+    },
+    {
+      "name": "Notion",
+      "slug": "notion",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 113
+    },
+    {
+      "name": "Noyo",
+      "slug": "noyo",
+      "industries": [
+        "Fintech",
+        "HR & Recruiting"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Omni",
+      "slug": "omni",
+      "industries": [
+        "Analytics"
+      ],
+      "jobCount": 21
+    },
+    {
+      "name": "Opal",
+      "slug": "opal",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 16
+    },
+    {
+      "name": "OpenAI",
+      "slug": "openai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 750
+    },
+    {
+      "name": "Openly",
+      "slug": "openly",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 11
+    },
+    {
+      "name": "OpusClip",
+      "slug": "opusclip",
+      "industries": [
+        "AI",
+        "Consumer"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Outschool",
+      "slug": "outschool",
+      "industries": [
+        "Education"
+      ],
+      "jobCount": 8
+    },
+    {
+      "name": "Oviva",
+      "slug": "oviva",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Owner",
+      "slug": "owner",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 49
+    },
+    {
+      "name": "Oyster",
+      "slug": "oyster",
+      "industries": [
+        "HR & Recruiting"
+      ],
+      "jobCount": 21
+    },
+    {
+      "name": "Passthrough",
+      "slug": "passthrough",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Patreon",
+      "slug": "patreon",
+      "industries": [
+        "Consumer",
+        "Marketplace"
+      ],
+      "jobCount": 10
+    },
+    {
+      "name": "Paxos",
+      "slug": "paxos",
+      "industries": [
+        "Fintech",
+        "Web3"
+      ],
+      "jobCount": 13
+    },
+    {
+      "name": "Payabli",
+      "slug": "payabli",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 11
+    },
+    {
+      "name": "Pearl Health",
+      "slug": "pearlhealth",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Perplexity",
+      "slug": "perplexity",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 87
+    },
+    {
+      "name": "Persona",
+      "slug": "persona",
+      "industries": [
+        "Cybersecurity",
+        "Fintech"
+      ],
+      "jobCount": 19
+    },
+    {
+      "name": "Phantom",
+      "slug": "phantom",
+      "industries": [
+        "Consumer",
+        "Web3"
+      ],
+      "jobCount": 14
+    },
+    {
+      "name": "Photoroom",
+      "slug": "photoroom",
+      "industries": [
+        "AI",
+        "Design"
+      ],
+      "jobCount": 13
+    },
+    {
+      "name": "Physical Intelligence",
+      "slug": "physicalintelligence",
+      "industries": [
+        "AI",
+        "Robotics"
+      ],
+      "jobCount": 24
+    },
+    {
+      "name": "Pika",
+      "slug": "pika",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 10
+    },
+    {
+      "name": "Pinecone",
+      "slug": "pinecone",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Plaid",
+      "slug": "plaid",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 116
+    },
+    {
+      "name": "Playpower Labs",
+      "slug": "playpowerlabs",
+      "industries": [
+        "Education"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Polymarket",
+      "slug": "polymarket",
+      "industries": [
+        "Fintech",
+        "Marketplace"
+      ],
+      "jobCount": 64
+    },
+    {
+      "name": "Poolside",
+      "slug": "poolside",
+      "industries": [
+        "AI",
+        "DevTools"
+      ],
+      "jobCount": 16
+    },
+    {
+      "name": "Poshmark",
+      "slug": "poshmark",
+      "industries": [
+        "Marketplace"
+      ],
+      "jobCount": 28
+    },
+    {
+      "name": "PostHog",
+      "slug": "posthog",
+      "industries": [
+        "Analytics",
+        "DevTools"
+      ],
+      "jobCount": 9
+    },
+    {
+      "name": "Prefect",
+      "slug": "prefect",
+      "industries": [
+        "Analytics",
+        "DevTools"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "project44",
+      "slug": "project44",
+      "industries": [],
+      "jobCount": 0
+    },
+    {
+      "name": "Pure",
+      "slug": "pure",
+      "industries": [
+        "Marketplace"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Pylon",
+      "slug": "pylon",
+      "industries": [
+        "DevTools",
+        "Productivity"
+      ],
+      "jobCount": 12
+    },
+    {
+      "name": "QuickNode",
+      "slug": "quicknode",
+      "industries": [
+        "Infrastructure",
+        "Web3"
+      ],
+      "jobCount": 4
+    },
+    {
+      "name": "Rad AI",
+      "slug": "radai",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 18
+    },
+    {
+      "name": "RAD Amplify",
+      "slug": "rad-intel",
+      "industries": [
+        "AI",
+        "Marketing"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Radiant",
+      "slug": "radiant",
+      "industries": [
+        "Energy",
+        "Hardware"
+      ],
+      "jobCount": 23
+    },
+    {
+      "name": "Railway",
+      "slug": "railway",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 8
+    },
+    {
+      "name": "Ramp",
+      "slug": "ramp",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 125
+    },
+    {
+      "name": "Range",
+      "slug": "range",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 56
+    },
+    {
+      "name": "Read AI",
+      "slug": "read-ai",
+      "industries": [
+        "AI",
+        "Productivity"
+      ],
+      "jobCount": 16
+    },
+    {
+      "name": "ReadMe",
+      "slug": "readme",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Recraft",
+      "slug": "recraft",
+      "industries": [
+        "AI",
+        "Design"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Redis",
+      "slug": "redis",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 28
+    },
+    {
+      "name": "Reflection AI",
+      "slug": "reflectionai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 63
+    },
+    {
+      "name": "Regard",
+      "slug": "regard",
+      "industries": [
+        "AI",
+        "Healthcare"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Render",
+      "slug": "render",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 34
+    },
+    {
+      "name": "Replit",
+      "slug": "replit",
+      "industries": [
+        "DevTools",
+        "Education"
+      ],
+      "jobCount": 86
+    },
+    {
+      "name": "Reprise",
+      "slug": "reprise",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Resend",
+      "slug": "resend",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 10
+    },
+    {
+      "name": "Retell AI",
+      "slug": "retell-ai",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 27
+    },
+    {
+      "name": "Rho",
+      "slug": "rho",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 38
+    },
+    {
+      "name": "Rime",
+      "slug": "rime",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Roboflow",
+      "slug": "roboflow",
+      "industries": [
+        "AI",
+        "DevTools"
+      ],
+      "jobCount": 27
+    },
+    {
+      "name": "Runpod",
+      "slug": "runpod",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 23
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "industries": [
+        "AI",
+        "Design"
+      ],
+      "jobCount": 4
+    },
+    {
+      "name": "Sailor Health",
+      "slug": "sailorhealth",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 153
+    },
+    {
+      "name": "Sana Labs",
+      "slug": "sana-roles",
+      "industries": [
+        "AI",
+        "Education"
+      ],
+      "jobCount": 31
+    },
+    {
+      "name": "Sardine",
+      "slug": "sardine",
+      "industries": [
+        "Cybersecurity",
+        "Fintech"
+      ],
+      "jobCount": 40
+    },
+    {
+      "name": "Saronic Technologies",
+      "slug": "saronic",
+      "industries": [
+        "Defense",
+        "Robotics"
+      ],
+      "jobCount": 271
+    },
+    {
+      "name": "Scribe",
+      "slug": "scribe",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 35
+    },
+    {
+      "name": "Second Front",
+      "slug": "Second-Front-Systems",
+      "industries": [
+        "Defense",
+        "DevTools"
+      ],
+      "jobCount": 16
+    },
+    {
+      "name": "Secureframe",
+      "slug": "secureframe",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 18
+    },
+    {
+      "name": "Semgrep",
+      "slug": "semgrep",
+      "industries": [
+        "Cybersecurity",
+        "DevTools"
+      ],
+      "jobCount": 18
+    },
+    {
+      "name": "Sent",
+      "slug": "sent",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 15
+    },
+    {
+      "name": "Sentry",
+      "slug": "sentry",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 47
+    },
+    {
+      "name": "Serve Robotics",
+      "slug": "serverobotics",
+      "industries": [
+        "Robotics"
+      ],
+      "jobCount": 51
+    },
+    {
+      "name": "Shield AI",
+      "slug": "shield-ai",
+      "industries": [
+        "AI",
+        "Defense"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Sierra",
+      "slug": "sierra",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 172
+    },
+    {
+      "name": "Sift",
+      "slug": "sift",
+      "industries": [
+        "Cybersecurity",
+        "Fintech"
+      ],
+      "jobCount": 9
+    },
+    {
+      "name": "Simetrik",
+      "slug": "simetrik",
+      "industries": [
+        "Analytics",
+        "Fintech"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "SiteMinder",
+      "slug": "siteminder",
+      "industries": [],
+      "jobCount": 43
+    },
+    {
+      "name": "Slingshot Aerospace",
+      "slug": "slingshot-aerospace",
+      "industries": [
+        "Defense"
+      ],
+      "jobCount": 19
+    },
+    {
+      "name": "Snowflake",
+      "slug": "snowflake",
+      "industries": [
+        "Analytics",
+        "Infrastructure"
+      ],
+      "jobCount": 410
+    },
+    {
+      "name": "Snyk",
+      "slug": "snyk",
+      "industries": [
+        "Cybersecurity",
+        "DevTools"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Socket",
+      "slug": "socket",
+      "industries": [
+        "Cybersecurity",
+        "DevTools"
+      ],
+      "jobCount": 24
+    },
+    {
+      "name": "Socure",
+      "slug": "socure",
+      "industries": [
+        "Cybersecurity",
+        "Fintech"
+      ],
+      "jobCount": 90
+    },
+    {
+      "name": "SonderMind",
+      "slug": "sondermind",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 136
+    },
+    {
+      "name": "Speak",
+      "slug": "speak",
+      "industries": [
+        "AI",
+        "Education"
+      ],
+      "jobCount": 41
+    },
+    {
+      "name": "Speakeasy",
+      "slug": "speakeasy",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Spring Health",
+      "slug": "spring-health",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Strava",
+      "slug": "strava",
+      "industries": [
+        "Consumer",
+        "Health & Wellness"
+      ],
+      "jobCount": 28
+    },
+    {
+      "name": "Stytch",
+      "slug": "stytch",
+      "industries": [
+        "Cybersecurity",
+        "DevTools"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Sublime Security",
+      "slug": "sublime-security",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Substack",
+      "slug": "substack",
+      "industries": [
+        "Consumer"
+      ],
+      "jobCount": 12
+    },
+    {
+      "name": "Suno",
+      "slug": "suno",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 63
+    },
+    {
+      "name": "Supabase",
+      "slug": "supabase",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 55
+    },
+    {
+      "name": "Supercell",
+      "slug": "supercell",
+      "industries": [],
+      "jobCount": 39
+    },
+    {
+      "name": "Superhuman",
+      "slug": "superhuman",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Superpower",
+      "slug": "superpower",
+      "industries": [
+        "Health & Wellness"
+      ],
+      "jobCount": 22
+    },
+    {
+      "name": "Sweep",
+      "slug": "sweep",
+      "industries": [
+        "Climate"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Sydecar",
+      "slug": "sydecar",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 7
+    },
+    {
+      "name": "Synctera",
+      "slug": "synctera",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 76
+    },
+    {
+      "name": "Talkiatry",
+      "slug": "talkiatry",
+      "industries": [
+        "Healthcare"
+      ],
+      "jobCount": 175
+    },
+    {
+      "name": "Tango",
+      "slug": "tango",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "TaskRay",
+      "slug": "taskray",
+      "industries": [
+        "Productivity"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Tavus",
+      "slug": "tavus",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 16
+    },
+    {
+      "name": "Teleport",
+      "slug": "goteleport",
+      "industries": [
+        "Cybersecurity",
+        "Infrastructure"
+      ],
+      "jobCount": 24
+    },
+    {
+      "name": "telli",
+      "slug": "telli",
+      "industries": [
+        "AI",
+        "Marketing"
+      ],
+      "jobCount": 16
+    },
+    {
+      "name": "Temporal",
+      "slug": "temporal",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 58
+    },
+    {
+      "name": "Tonal",
+      "slug": "tonal",
+      "industries": [
+        "Hardware",
+        "Health & Wellness"
+      ],
+      "jobCount": 22
+    },
+    {
+      "name": "Town",
+      "slug": "town",
+      "industries": [
+        "AI",
+        "Fintech"
+      ],
+      "jobCount": 13
+    },
+    {
+      "name": "Trigger.dev",
+      "slug": "triggerdev",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "TRM Labs",
+      "slug": "trm-labs",
+      "industries": [
+        "Cybersecurity",
+        "Web3"
+      ],
+      "jobCount": 120
+    },
+    {
+      "name": "Turion Space",
+      "slug": "turion-space",
+      "industries": [
+        "Defense"
+      ],
+      "jobCount": 23
+    },
+    {
+      "name": "Turnkey",
+      "slug": "turnkey",
+      "industries": [
+        "Fintech",
+        "Web3"
+      ],
+      "jobCount": 13
+    },
+    {
+      "name": "Twelve",
+      "slug": "twelve",
+      "industries": [
+        "Climate"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Twelve Labs",
+      "slug": "twelve-labs",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 17
+    },
+    {
+      "name": "Unify",
+      "slug": "unify",
+      "industries": [
+        "AI",
+        "Marketing"
+      ],
+      "jobCount": 5
+    },
+    {
+      "name": "Unit",
+      "slug": "unit",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 6
+    },
+    {
+      "name": "Vanta",
+      "slug": "vanta",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 103
+    },
+    {
+      "name": "Vapi",
+      "slug": "vapi",
+      "industries": [
+        "AI",
+        "DevTools"
+      ],
+      "jobCount": 32
+    },
+    {
+      "name": "Vast",
+      "slug": "vast",
+      "industries": [
+        "Defense"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Vast.ai",
+      "slug": "vastai",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 14
+    },
+    {
+      "name": "Vaulted Deep",
+      "slug": "vaulted-deep",
+      "industries": [
+        "Climate"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Vercel",
+      "slug": "vercel",
+      "industries": [
+        "DevTools",
+        "Infrastructure"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Verge Genomics",
+      "slug": "verge-genomics",
+      "industries": [
+        "AI",
+        "Biotech"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Vitally",
+      "slug": "vitally",
+      "industries": [
+        "Marketing"
+      ],
+      "jobCount": 1
+    },
+    {
+      "name": "Voodoo",
+      "slug": "voodoo",
+      "industries": [],
+      "jobCount": 112
+    },
+    {
+      "name": "Wan Bridge",
+      "slug": "wanbridge",
+      "industries": [],
+      "jobCount": 0
+    },
+    {
+      "name": "Warp",
+      "slug": "warp",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 19
+    },
+    {
+      "name": "Warren",
+      "slug": "warren",
+      "industries": [
+        "Fintech"
+      ],
+      "jobCount": 14
+    },
+    {
+      "name": "Watershed",
+      "slug": "watershed",
+      "industries": [
+        "Climate"
+      ],
+      "jobCount": 38
+    },
+    {
+      "name": "Wayve",
+      "slug": "wayve",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 110
+    },
+    {
+      "name": "Weaviate",
+      "slug": "weaviate",
+      "industries": [
+        "AI",
+        "Infrastructure"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Webflow",
+      "slug": "webflow",
+      "industries": [
+        "Design",
+        "DevTools"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Whoop",
+      "slug": "whoop",
+      "industries": [
+        "Hardware",
+        "Health & Wellness"
+      ],
+      "jobCount": 165
+    },
+    {
+      "name": "Windmill",
+      "slug": "windmill",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 3
+    },
+    {
+      "name": "Wiz",
+      "slug": "wiz",
+      "industries": [
+        "Cybersecurity"
+      ],
+      "jobCount": 0
+    },
+    {
+      "name": "Wordsmith",
+      "slug": "wordsmith",
+      "industries": [
+        "AI"
+      ],
+      "jobCount": 20
+    },
+    {
+      "name": "WorkOS",
+      "slug": "workos",
+      "industries": [
+        "Cybersecurity",
+        "DevTools"
+      ],
+      "jobCount": 24
+    },
+    {
+      "name": "Writer",
+      "slug": "writer",
+      "industries": [
+        "AI",
+        "Productivity"
+      ],
+      "jobCount": 55
+    },
+    {
+      "name": "Zapier",
+      "slug": "zapier",
+      "industries": [
+        "DevTools",
+        "Productivity"
+      ],
+      "jobCount": 14
+    },
+    {
+      "name": "Zed",
+      "slug": "zed",
+      "industries": [
+        "DevTools"
+      ],
+      "jobCount": 2
+    },
+    {
+      "name": "Zus Health",
+      "slug": "zus-health",
+      "industries": [
+        "DevTools",
+        "Healthcare"
+      ],
+      "jobCount": 7
+    }
+  ]
+}
