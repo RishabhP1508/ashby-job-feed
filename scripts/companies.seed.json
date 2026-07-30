@@ -1,8 +1,8 @@
 {
   "$comment": "Seed list for the browse-by-industry directory. NOT validated. Every entry must pass the validation script before it ships. tier=confirmed means a jobs.ashbyhq.com/<slug> URL was observed. tier=named means a source names the company as an Ashby user but the slug is unresolved. tier=candidate means both Ashby membership and the slug are unverified; expect roughly 15-25 percent of candidates to be on Ashby, since Greenhouse and Lever hold most of the rest of this market. Slugs are often not guessable (RAD Amplify is rad-intel, edu.fyi is fyi), so probe slugCandidates in order, keep the first 200, and fall back to scraping the careers page at domainCandidates for anything that misses.",
   "generatedAt": "2026-07-30",
-  "minCompaniesPerIndustry": 6,
-  "$mergeGuidance": "Counts below are pre-validation and will shrink a lot. After validation, drop or merge any industry left under minCompaniesPerIndustry: a filter chip returning two companies is worse than no chip.",
+  "minCompaniesPerIndustry": 3,
+  "$mergeGuidance": "Counts below are pre-validation and will shrink a lot. After validation, drop or merge any industry left under minCompaniesPerIndustry. The threshold is 3, not 6: the argument that a chip returning two companies is worse than no chip holds at 2 and not at 5, and dropping a label to avoid a small chip solves a display problem by deleting data. Chips show their count, so 'Gaming 3' sets its own expectation.",
   "suggestedMerges": {
     "Aerospace": "Defense",
     "Health & Wellness": "Healthcare",
@@ -11,7 +11,9 @@
     "Transportation": "Logistics",
     "Web3": "Fintech",
     "Design": "Productivity",
-    "Insurance": "Fintech"
+    "Insurance": "Fintech",
+    "Retail": "Consumer",
+    "Travel": "Consumer"
   },
   "industries": [
     "AI",

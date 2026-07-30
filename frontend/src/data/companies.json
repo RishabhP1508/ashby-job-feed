@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-07-30T22:18:41Z",
+  "generatedAt": "2026-07-30T22:34:24Z",
   "industries": [
     "AI",
+    "Aerospace",
     "Analytics",
     "Biotech",
     "Climate",
@@ -14,15 +15,21 @@
     "Education",
     "Energy",
     "Fintech",
+    "Food",
+    "Gaming",
     "HR & Recruiting",
     "Hardware",
     "Health & Wellness",
     "Healthcare",
     "Infrastructure",
+    "Insurance",
+    "Legal",
     "Marketing",
     "Marketplace",
     "Productivity",
+    "Real Estate",
     "Robotics",
+    "Transportation",
     "Web3"
   ],
   "companies": [
@@ -151,7 +158,7 @@
       "name": "Apex Space",
       "slug": "apex-technology-inc",
       "industries": [
-        "Defense"
+        "Aerospace"
       ],
       "jobCount": 92
     },
@@ -167,7 +174,8 @@
       "name": "Applied Intuition",
       "slug": "applied",
       "industries": [
-        "AI"
+        "AI",
+        "Transportation"
       ],
       "jobCount": 268
     },
@@ -270,6 +278,7 @@
       "name": "Blackbird",
       "slug": "blackbird-labs-inc",
       "industries": [
+        "Food",
         "Web3"
       ],
       "jobCount": 9
@@ -555,7 +564,8 @@
       "name": "Crosby",
       "slug": "crosby",
       "industries": [
-        "AI"
+        "AI",
+        "Legal"
       ],
       "jobCount": 20
     },
@@ -613,7 +623,8 @@
       "name": "Deliveroo",
       "slug": "deliveroo",
       "industries": [
-        "Consumer"
+        "Consumer",
+        "Food"
       ],
       "jobCount": 182
     },
@@ -714,7 +725,8 @@
       "name": "EliseAI",
       "slug": "eliseai",
       "industries": [
-        "AI"
+        "AI",
+        "Real Estate"
       ],
       "jobCount": 103
     },
@@ -748,6 +760,7 @@
       "name": "Eneba",
       "slug": "eneba",
       "industries": [
+        "Gaming",
         "Marketplace"
       ],
       "jobCount": 29
@@ -929,6 +942,7 @@
       "name": "Halter",
       "slug": "halter",
       "industries": [
+        "Food",
         "Robotics"
       ],
       "jobCount": 286
@@ -946,7 +960,8 @@
       "name": "Harvey",
       "slug": "harvey",
       "industries": [
-        "AI"
+        "AI",
+        "Legal"
       ],
       "jobCount": 346
     },
@@ -987,7 +1002,8 @@
       "name": "Helm.ai",
       "slug": "helm-ai",
       "industries": [
-        "AI"
+        "AI",
+        "Transportation"
       ],
       "jobCount": 9
     },
@@ -1105,7 +1121,8 @@
       "name": "Juniper Square",
       "slug": "junipersquare",
       "industries": [
-        "Fintech"
+        "Fintech",
+        "Real Estate"
       ],
       "jobCount": 41
     },
@@ -1122,7 +1139,7 @@
       "name": "Kin",
       "slug": "kin",
       "industries": [
-        "Fintech"
+        "Insurance"
       ],
       "jobCount": 20
     },
@@ -1215,7 +1232,8 @@
       "name": "Legora",
       "slug": "legora",
       "industries": [
-        "AI"
+        "AI",
+        "Legal"
       ],
       "jobCount": 274
     },
@@ -1247,6 +1265,7 @@
       "name": "Lightspeed Commerce",
       "slug": "lightspeedhq",
       "industries": [
+        "Consumer",
         "Fintech"
       ],
       "jobCount": 152
@@ -1474,7 +1493,7 @@
       "name": "Newfront",
       "slug": "newfront",
       "industries": [
-        "Fintech"
+        "Insurance"
       ],
       "jobCount": 0
     },
@@ -1498,8 +1517,8 @@
       "name": "Noyo",
       "slug": "noyo",
       "industries": [
-        "Fintech",
-        "HR & Recruiting"
+        "HR & Recruiting",
+        "Insurance"
       ],
       "jobCount": 1
     },
@@ -1531,7 +1550,7 @@
       "name": "Openly",
       "slug": "openly",
       "industries": [
-        "Fintech"
+        "Insurance"
       ],
       "jobCount": 11
     },
@@ -1564,6 +1583,7 @@
       "name": "Owner",
       "slug": "owner",
       "industries": [
+        "Food",
         "Marketing"
       ],
       "jobCount": 49
@@ -1717,6 +1737,7 @@
       "name": "Poshmark",
       "slug": "poshmark",
       "industries": [
+        "Consumer",
         "Marketplace"
       ],
       "jobCount": 28
@@ -2091,13 +2112,16 @@
     {
       "name": "SiteMinder",
       "slug": "siteminder",
-      "industries": [],
+      "industries": [
+        "Consumer"
+      ],
       "jobCount": 43
     },
     {
       "name": "Slingshot Aerospace",
       "slug": "slingshot-aerospace",
       "industries": [
+        "Aerospace",
         "Defense"
       ],
       "jobCount": 19
@@ -2225,7 +2249,9 @@
     {
       "name": "Supercell",
       "slug": "supercell",
-      "industries": [],
+      "industries": [
+        "Gaming"
+      ],
       "jobCount": 39
     },
     {
@@ -2374,6 +2400,7 @@
       "name": "Turion Space",
       "slug": "turion-space",
       "industries": [
+        "Aerospace",
         "Defense"
       ],
       "jobCount": 23
@@ -2441,7 +2468,7 @@
       "name": "Vast",
       "slug": "vast",
       "industries": [
-        "Defense"
+        "Aerospace"
       ],
       "jobCount": 0
     },
@@ -2491,13 +2518,17 @@
     {
       "name": "Voodoo",
       "slug": "voodoo",
-      "industries": [],
+      "industries": [
+        "Gaming"
+      ],
       "jobCount": 112
     },
     {
       "name": "Wan Bridge",
       "slug": "wanbridge",
-      "industries": [],
+      "industries": [
+        "Real Estate"
+      ],
       "jobCount": 0
     },
     {
@@ -2528,7 +2559,8 @@
       "name": "Wayve",
       "slug": "wayve",
       "industries": [
-        "AI"
+        "AI",
+        "Transportation"
       ],
       "jobCount": 110
     },
@@ -2579,7 +2611,8 @@
       "name": "Wordsmith",
       "slug": "wordsmith",
       "industries": [
-        "AI"
+        "AI",
+        "Legal"
       ],
       "jobCount": 20
     },

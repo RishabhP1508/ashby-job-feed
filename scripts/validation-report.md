@@ -1,6 +1,6 @@
 # Ashby board validation report
 
-Generated 2026-07-30T22:18:41Z. Run was clean.
+Generated 2026-07-30T22:34:24Z. Run was clean.
 
 ## Headline
 
@@ -28,7 +28,7 @@ failing, not that the pipeline is broken. Those need opposite fixes.
 - shipped with 0 open roles: 36
 - rejected by override: 0
 
-Timing: pass 1 446s, pass 2 412s
+Timing: pass 1 0s, pass 2 306s
 
 ## Verify by eye
 
@@ -303,49 +303,45 @@ Slug guessing alone would have missed these, which is why the careers-page fallb
 Final list after merges and drops.
 
 - AI: 102
+- Aerospace: 4
 - Analytics: 16
 - Biotech: 9
 - Climate: 7
 - Construction: 6
-- Consumer: 9
+- Consumer: 12
 - Cybersecurity: 26
-- Defense: 8
+- Defense: 6
 - Design: 7
 - DevTools: 61
 - Education: 16
 - Energy: 8
-- Fintech: 37
+- Fintech: 33
+- Food: 4
+- Gaming: 3
 - HR & Recruiting: 11
 - Hardware: 8
 - Health & Wellness: 7
 - Healthcare: 21
 - Infrastructure: 29
+- Insurance: 4
+- Legal: 4
 - Marketing: 16
 - Marketplace: 6
 - Productivity: 24
+- Real Estate: 3
 - Robotics: 7
+- Transportation: 3
 - Web3: 9
 
 ### Merges and drops applied
 
-- merged Aerospace into Defense: had 4, under 6
-- merged Insurance into Fintech: had 4, under 6
-- merged Transportation into Logistics: had 3, under 6
-- dropped Food: 4 companies, under 6, no merge target
-- dropped Gaming: 3 companies, under 6, no merge target
-- dropped Legal: 4 companies, under 6, no merge target
-- dropped Logistics: 5 companies, under 6, no merge target
-- dropped Real Estate: 3 companies, under 6, no merge target
-- dropped Retail: 2 companies, under 6, no merge target
-- dropped Travel: 1 companies, under 6, no merge target
+- merged Retail into Consumer: had 2, under 3
+- merged Travel into Consumer: had 1, under 3
+- dropped Logistics: 2 companies, under 3, no merge target
 
-5 shipped companies ended with no industry label and will not appear under any chip:
+1 shipped companies ended with no industry label and will not appear under any chip:
 
 - project44
-- SiteMinder
-- Supercell
-- Voodoo
-- Wan Bridge
 
 ## Slug collisions resolved before probing
 
