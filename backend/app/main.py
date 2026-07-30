@@ -309,12 +309,18 @@ if _DIST.is_dir():
     if _ASSETS.is_dir():
         app.mount("/assets", StaticFiles(directory=_ASSETS), name="assets")
 
-    @app.get("/")
+    # HEAD too, so link unfurlers get a preview instead of a 405.
+    @app.api_route("/", methods=["GET", "HEAD"])
     def _index() -> FileResponse:
         return FileResponse(_DIST / "index.html")
 
     @app.get("/{full_path:path}")
     def _spa(full_path: str) -> FileResponse:
+        # An unmatched /api path must not fall through to the SPA shell, or the
+        # caller gets 200 and HTML where it expects JSON. Real API routes are
+        # registered above and never reach this.
+        if full_path.startswith("api/"):
+            raise HTTPException(status_code=404, detail="Unknown API route.")
         candidate = _DIST / full_path
         if candidate.is_file():
             return FileResponse(candidate)
