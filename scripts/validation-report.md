@@ -1,6 +1,6 @@
 # Ashby board validation report
 
-Generated 2026-07-30T22:34:24Z. Run was clean.
+Generated 2026-07-30T22:52:50Z. Run was clean.
 
 ## Headline
 
@@ -28,7 +28,7 @@ failing, not that the pipeline is broken. Those need opposite fixes.
 - shipped with 0 open roles: 36
 - rejected by override: 0
 
-Timing: pass 1 0s, pass 2 306s
+Timing: pass 1 0s, pass 2 304s
 
 ## Verify by eye
 
@@ -325,23 +325,20 @@ Final list after merges and drops.
 - Infrastructure: 29
 - Insurance: 4
 - Legal: 4
+- Logistics & Transportation: 5
 - Marketing: 16
 - Marketplace: 6
 - Productivity: 24
 - Real Estate: 3
 - Robotics: 7
-- Transportation: 3
 - Web3: 9
 
 ### Merges and drops applied
 
+- renamed Logistics (2) into Logistics & Transportation, unconditional, now 5
+- renamed Transportation (3) into Logistics & Transportation, unconditional, now 5
 - merged Retail into Consumer: had 2, under 3
 - merged Travel into Consumer: had 1, under 3
-- dropped Logistics: 2 companies, under 3, no merge target
-
-1 shipped companies ended with no industry label and will not appear under any chip:
-
-- project44
 
 ## Slug collisions resolved before probing
 

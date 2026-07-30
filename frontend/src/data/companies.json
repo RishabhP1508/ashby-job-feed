@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T22:34:24Z",
+  "generatedAt": "2026-07-30T22:52:50Z",
   "industries": [
     "AI",
     "Aerospace",
@@ -24,12 +24,12 @@
     "Infrastructure",
     "Insurance",
     "Legal",
+    "Logistics & Transportation",
     "Marketing",
     "Marketplace",
     "Productivity",
     "Real Estate",
     "Robotics",
-    "Transportation",
     "Web3"
   ],
   "companies": [
@@ -175,7 +175,7 @@
       "slug": "applied",
       "industries": [
         "AI",
-        "Transportation"
+        "Logistics & Transportation"
       ],
       "jobCount": 268
     },
@@ -1003,7 +1003,7 @@
       "slug": "helm-ai",
       "industries": [
         "AI",
-        "Transportation"
+        "Logistics & Transportation"
       ],
       "jobCount": 9
     },
@@ -1763,7 +1763,9 @@
     {
       "name": "project44",
       "slug": "project44",
-      "industries": [],
+      "industries": [
+        "Logistics & Transportation"
+      ],
       "jobCount": 0
     },
     {
@@ -2070,6 +2072,7 @@
       "name": "Serve Robotics",
       "slug": "serverobotics",
       "industries": [
+        "Logistics & Transportation",
         "Robotics"
       ],
       "jobCount": 51
@@ -2560,7 +2563,7 @@
       "slug": "wayve",
       "industries": [
         "AI",
-        "Transportation"
+        "Logistics & Transportation"
       ],
       "jobCount": 110
     },

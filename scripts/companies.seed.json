@@ -3,12 +3,16 @@
   "generatedAt": "2026-07-30",
   "minCompaniesPerIndustry": 3,
   "$mergeGuidance": "Counts below are pre-validation and will shrink a lot. After validation, drop or merge any industry left under minCompaniesPerIndustry. The threshold is 3, not 6: the argument that a chip returning two companies is worse than no chip holds at 2 and not at 5, and dropping a label to avoid a small chip solves a display problem by deleting data. Chips show their count, so 'Gaming 3' sets its own expectation.",
+  "$renameGuidance": "industryRenames are applied unconditionally, before any threshold logic, unlike suggestedMerges which only fire below minCompaniesPerIndustry. Use them to relabel a category, not to rescue a thin one. Transportation and Logistics were two thin chips splitting a coherent category where neither label fit the other's members: project44 is supply chain visibility rather than transportation, and Wayve is autonomous driving rather than logistics. One chip is both more accurate and better to browse.",
+  "industryRenames": {
+    "Logistics": "Logistics & Transportation",
+    "Transportation": "Logistics & Transportation"
+  },
   "suggestedMerges": {
     "Aerospace": "Defense",
     "Health & Wellness": "Healthcare",
     "Climate": "Energy",
     "Construction": "Real Estate",
-    "Transportation": "Logistics",
     "Web3": "Fintech",
     "Design": "Productivity",
     "Insurance": "Fintech",

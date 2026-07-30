@@ -551,6 +551,20 @@ def apply_industry_rules(records: list[dict], seed: dict) -> tuple[list[str], li
     shipped = [r for r in records if r["state"] == "shipped"]
     notes: list[str] = []
 
+    # Unconditional renames run first and ignore the threshold. They exist for
+    # relabelling a category, not for rescuing a thin one: two thin chips can
+    # split a coherent category while neither label fits the other's members.
+    renames = seed.get("industryRenames") or {}
+    if renames:
+        before = Counter(i for r in shipped for i in r["industries"])
+        for rec in shipped:
+            rec["industries"] = sorted({renames.get(i, i) for i in rec["industries"]})
+        after = Counter(i for r in shipped for i in r["industries"])
+        for src, dst in sorted(renames.items()):
+            notes.append(
+                f"renamed {src} ({before[src]}) into {dst}, unconditional, now {after[dst]}"
+            )
+
     for _ in range(10):
         counts = Counter(i for r in shipped for i in r["industries"])
         thin = {name for name, n in counts.items() if n < threshold}
