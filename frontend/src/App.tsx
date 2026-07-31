@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import type { CompanyState, Job, SavedSearch, User } from './types'
+import type { CompanyState, DirectoryCompany, Job, SavedSearch, User } from './types'
+// Static import for now. A later task swaps this for an API fetch, and keeping
+// the data source here confines that change to this file.
+import directory from './data/companies.json'
 import {
   deleteSearch,
   fetchBoard,
@@ -33,11 +36,17 @@ import { AuthPopover } from './components/AuthPopover'
 import { Filters } from './components/Filters'
 import { Facet } from './components/Facet'
 import { JobTable, type TableState } from './components/JobTable'
+import { IndustryBrowser } from './components/IndustryBrowser'
+
+const DIRECTORY = directory.companies as DirectoryCompany[]
 
 export default function App() {
   const [companies, setCompanies] = useState<CompanyState[]>([])
   const [filters, setFilters] = useState<FilterState>(() => parseUrl().filters)
   const [handle, setHandle] = useState('')
+  // Expanded on a first visit, collapsed when a URL already carries companies.
+  // Seeded once, so adding a card cannot slam the panel shut mid-browse.
+  const [browserOpen, setBrowserOpen] = useState(() => parseUrl().companies.length === 0)
   const [status, setStatus] = useState('')
   const [copied, setCopied] = useState(false)
   const [notice, setNotice] = useState<{ id: number; message: string } | null>(null)
@@ -382,6 +391,16 @@ export default function App() {
 
   const now = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
 
+  // Rendered in one of two places depending on open state, so the props live here.
+  // Adding a company reuses addCompany, the same path the text input takes.
+  const browserProps = {
+    companies: DIRECTORY,
+    added: slugOrder,
+    onAdd: addCompany,
+    open: browserOpen,
+    onToggle: () => setBrowserOpen((v) => !v),
+  }
+
   const metaBits: string[] = []
   if (filters.cos.length) metaBits.push(`${filters.cos.length} ${filters.cos.length > 1 ? 'companies' : 'company'}`)
   if (filters.locs.length) metaBits.push(`${filters.locs.length} ${filters.locs.length > 1 ? 'locations' : 'location'}`)
@@ -403,7 +422,14 @@ export default function App() {
           ) : null}
         </div>
         <div className="hero-copy">
-          <p className="eyebrow"><span className="eyebrow-dot" aria-hidden="true" />Live roles from Ashby</p>
+          <p className="eyebrow">
+            <svg className="mark" width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <rect x="1" y="2" width="12" height="2" rx="1" fill="currentColor" />
+              <rect x="1" y="6" width="8" height="2" rx="1" fill="currentColor" opacity=".7" />
+              <rect x="1" y="10" width="5" height="2" rx="1" fill="currentColor" opacity=".45" />
+            </svg>
+            Live roles from Ashby
+          </p>
           <h1>One focused feed for every company you track.</h1>
           <p className="lede">
             Add company boards, narrow the signal, and move from discovery to application without tab sprawl.
@@ -449,14 +475,20 @@ export default function App() {
           Use commas or spaces for multiple boards. Find each handle at jobs.ashbyhq.com/NAME.
         </div>
 
-        <CompanyBar
-          companies={companies}
-          counts={companyCounts}
-          selected={filters.cos}
-          onToggle={(s) => toggle('cos', s)}
-          onRemove={removeCompany}
-          onRetry={retryCompany}
-        />
+        <div className="cbar-row">
+          <CompanyBar
+            companies={companies}
+            counts={companyCounts}
+            selected={filters.cos}
+            onToggle={(s) => toggle('cos', s)}
+            onRemove={removeCompany}
+            onRetry={retryCompany}
+          />
+          {/* Collapsed, the toggle sits inline with the chips. Expanded, the
+              panel needs the full width, so it renders below. */}
+          {!browserOpen && <IndustryBrowser {...browserProps} />}
+        </div>
+        {browserOpen && <IndustryBrowser {...browserProps} />}
 
         {user && (
           <>

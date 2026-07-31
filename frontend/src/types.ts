@@ -23,6 +23,16 @@ export interface BoardResponse {
   jobs: Job[]
 }
 
+/** One entry in the validated company directory (frontend/src/data/companies.json).
+ *  jobCount is a validation-time snapshot used only to order the grid. It goes
+ *  stale within days, so it is never displayed. */
+export interface DirectoryCompany {
+  name: string
+  slug: string
+  industries: string[]
+  jobCount: number
+}
+
 export type CompanyStatus = 'loading' | 'ok' | 'error'
 
 export interface CompanyState {

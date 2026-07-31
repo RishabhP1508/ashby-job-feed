@@ -1,4 +1,4 @@
-/* ashby-job-feed — Dark developer-tool theme (Linear / Vercel / Raycast).
+/* ashby-job-feed, dark developer-tool theme (Linear / Vercel / Raycast).
    Source of truth: preview-1-dark-devtool.html. Every class any component
    emits has a rule here; states are covered explicitly. */
 
@@ -38,6 +38,11 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; }
+
+/* Buttons do not inherit color, so without this they fall back to the browser's
+   near-black `buttontext` and go invisible on this canvas. Anything needing a
+   different color still overrides it below. */
+button { color: inherit; font-family: inherit; }
 
 body {
   font-family: var(--sans);
@@ -81,7 +86,9 @@ body {
   gap: 9px;
   margin: 8px 0 0;
 }
-.eyebrow-dot { width: 20px; height: 2px; background: var(--accent); border-radius: 2px; }
+/* Three descending bars read as a feed and echo the results table. The 20px
+   accent rule this replaced read as punctuation, like an em dash. */
+.eyebrow .mark { flex: none; color: var(--accent); }
 
 h1 {
   font-weight: 600;
@@ -810,6 +817,168 @@ footer { margin-top: 24px; text-align: center; font-family: var(--mono); font-si
   td.td-apply { padding-top: 10px; }
   .tag { margin-left: 0; }
 }
+
+/* ---- industry browser ---- */
+/* Every interactive class here sets an explicit color rather than relying only
+   on the global button reset. */
+
+/* Holds the company chips and, when the browser is collapsed, its toggle. */
+.cbar-row { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 14px; }
+.cbar-row .cbar { margin-top: 0; }
+
+.browser { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 16px; }
+
+.browser-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.browser-title { font-weight: 600; font-size: .95rem; letter-spacing: -.01em; color: var(--ink); }
+.browser-sub { font-family: var(--mono); font-size: .72rem; color: var(--faint); }
+
+.collapse {
+  margin-left: auto;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font-size: .82rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: var(--radius-sm);
+}
+.collapse:hover { color: var(--accent-ink); }
+.collapse:focus-visible { outline: none; box-shadow: var(--ring); }
+
+.bsearch {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--panel-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  margin-bottom: 13px;
+}
+.bsearch svg { flex: none; color: var(--faint); }
+.bsearch input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: none;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .92rem;
+  outline: none;
+}
+.bsearch input::placeholder { color: var(--faint); }
+.bsearch:focus-within { border-color: var(--accent); box-shadow: var(--ring); }
+
+.ind-chips { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 14px; }
+.ind {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line-2);
+  background: var(--panel-2);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: .83rem;
+  cursor: pointer;
+  transition: border-color var(--t-fast), background var(--t-fast), opacity var(--t-fast);
+}
+.ind:hover { border-color: var(--accent); }
+.ind:focus-visible { outline: none; box-shadow: var(--ring); }
+.ind[aria-pressed=true] {
+  background: var(--accent-wash);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+.ind .n { font-family: var(--mono); font-size: .7rem; color: var(--faint); }
+.ind[aria-pressed=true] .n { color: var(--accent-ink); }
+/* A search reaches every company, so the chips are ignored while one is active.
+   They must not look applied when they are not. The selection survives in state. */
+.ind.dimmed { opacity: .45; }
+.ind.dimmed:hover { border-color: var(--line-2); }
+
+.bmeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: .75rem;
+  color: var(--faint);
+  margin: 0 2px 10px;
+}
+.clear {
+  border: none;
+  background: none;
+  color: var(--accent-ink);
+  font-family: var(--sans);
+  font-size: .8rem;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+}
+.clear:hover { text-decoration: underline; }
+.clear:focus-visible { outline: none; box-shadow: var(--ring); }
+
+.cgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 8px; }
+
+.ccard {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  cursor: pointer;
+  display: block;
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+.ccard:hover { border-color: var(--accent); background: var(--panel); }
+.ccard:focus-visible { outline: none; border-color: var(--accent); box-shadow: var(--ring); }
+.ccard .cn { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.ccard .nm { font-weight: 600; font-size: .9rem; letter-spacing: -.01em; }
+.ccard .plus { font-family: var(--mono); font-size: .78rem; color: var(--faint); }
+.ccard:hover .plus { color: var(--accent-ink); }
+.ccard .tags { margin-top: 5px; display: flex; gap: 5px; flex-wrap: wrap; }
+.ccard .tag2 {
+  font-family: var(--mono);
+  font-size: .63rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: .62;
+  border: 1px solid var(--line-2);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+/* Already in the company bar. Adding again is a no-op, so the card says so
+   instead of looking broken. It stays in the grid rather than disappearing. */
+.ccard.is-added { cursor: default; opacity: .6; }
+.ccard.is-added:hover { border-color: var(--line); background: var(--panel-2); }
+.ccard.is-added .plus { color: var(--live); }
+.ccard.is-added:hover .plus { color: var(--live); }
+
+.bempty { margin: 4px 2px 0; font-size: .88rem; color: var(--muted); }
+.bfoot { margin: 12px 0 0; font-family: var(--mono); font-size: .7rem; color: var(--faint); }
+
+.browse-btn {
+  border: 1px dashed var(--line-2);
+  background: none;
+  color: var(--muted);
+  font-size: .85rem;
+  padding: 9px 15px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--t-fast), color var(--t-fast);
+}
+.browse-btn:hover { border-color: var(--accent); color: var(--accent-ink); }
+.browse-btn:focus-visible { outline: none; box-shadow: var(--ring); }
 
 /* ---- reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
