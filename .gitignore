@@ -22,5 +22,9 @@ backend/data/
 scripts/.validation-cache.json
 scripts/.validation-cache.tmp
 
+# slugs skipped during review, local to whoever ran scripts/review_suggestions.py
+scripts/.review-ignore.json
+scripts/.review-ignore.json.tmp
+
 preview-1-dark-devtool.html
 preview-industry-browser.html

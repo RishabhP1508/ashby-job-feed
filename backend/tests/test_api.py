@@ -1,6 +1,9 @@
 import httpx
 import pytest
 from fastapi.testclient import TestClient
+from sqlalchemy import select
+
+from app import db
 
 
 @pytest.fixture()
@@ -41,6 +44,46 @@ def test_board_maps_upstream_404(client, monkeypatch):
 
     monkeypatch.setattr("app.main.fetch_board", fake_fetch)
     assert client.get("/api/board/missing").status_code == 404
+
+
+def _logged_slugs():
+    """Read the discovery log through a fresh session.
+
+    Background tasks run on another thread, so this also proves the write really
+    landed in the test database rather than failing a SQLite thread check.
+    """
+    with db.SessionLocal() as session:
+        return {r.slug: r.fetch_count for r in session.execute(select(db.BoardFetch)).scalars()}
+
+
+def test_cache_miss_logs_the_fetch_and_a_hit_does_not(client, monkeypatch):
+    async def fake_fetch(slug: str):
+        return [{"company": slug, "title": "Role"}]
+
+    monkeypatch.setattr("app.main.fetch_board", fake_fetch)
+
+    assert client.get("/api/board/logme").json()["cached"] is False
+    assert _logged_slugs() == {"logme": 1}, "a cache miss records the fetch"
+
+    # Second call is served from the TTL cache, so it must not touch the database.
+    assert client.get("/api/board/logme").json()["cached"] is True
+    assert _logged_slugs() == {"logme": 1}, "a cache hit must not record anything"
+
+
+def test_board_still_succeeds_when_logging_raises(client, monkeypatch):
+    async def fake_fetch(slug: str):
+        return [{"company": slug, "title": "Role"}]
+
+    def boom(*_args, **_kwargs):
+        raise RuntimeError("database is down")
+
+    monkeypatch.setattr("app.main.fetch_board", fake_fetch)
+    monkeypatch.setattr("app.main.db.record_fetch", boom)
+
+    res = client.get("/api/board/boomco")
+    assert res.status_code == 200
+    assert res.json()["count"] == 1
+    assert _logged_slugs() == {}, "the failed write left nothing behind"
 
 
 def test_searches_crud_when_logged_in(client):

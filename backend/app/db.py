@@ -108,6 +108,21 @@ class Application(Base):
     user: Mapped["User"] = relationship(back_populates="applications")
 
 
+class BoardFetch(Base):
+    """Slugs people actually fetched, as a discovery signal for boards missing
+    from the directory. The slug only: no user id, no IP, nothing tied to a person.
+    """
+
+    __tablename__ = "board_fetches"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    slug: Mapped[str] = mapped_column(Text, unique=True, index=True)
+    first_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    last_seen: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    fetch_count: Mapped[int] = mapped_column(default=1)
+    last_job_count: Mapped[int] = mapped_column(default=0)
+
+
 VALID_STATUSES = {"applied", "interviewing", "rejected", "offer"}
 
 
@@ -139,6 +154,37 @@ def _iso(dt: datetime | None) -> str | None:
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.isoformat()
+
+
+# ---- board discovery log ----
+def record_fetch(session: Session, slug: str, job_count: int) -> None:
+    """Upsert one slug: insert on first sight, else bump the count and refresh.
+
+    ponytail: select-then-write, so two concurrent tasks for the same uncached
+    slug can both miss the select and one loses on the unique constraint. The
+    caller swallows that and the session rolls back, costing one uncounted
+    fetch. Acceptable because this is a discovery signal, not analytics. Move to
+    a dialect-specific ON CONFLICT upsert only if exact counts ever matter.
+    """
+    now = _now()
+    row = session.execute(
+        select(BoardFetch).where(BoardFetch.slug == slug)
+    ).scalar_one_or_none()
+    if row is None:
+        session.add(
+            BoardFetch(
+                slug=slug,
+                first_seen=now,
+                last_seen=now,
+                fetch_count=1,
+                last_job_count=job_count,
+            )
+        )
+    else:
+        row.fetch_count += 1
+        row.last_seen = now
+        row.last_job_count = job_count
+    session.commit()
 
 
 # ---- users ----

@@ -1,4 +1,5 @@
 import pytest
+from sqlalchemy import select
 
 from app import db
 from app.db import SessionLocal
@@ -49,6 +50,25 @@ def test_delete_and_missing(session, user):
     assert db.delete_search(session, user.id, row["id"]) is True
     assert db.delete_search(session, user.id, row["id"]) is False
     assert db.touch_search(session, user.id, 999) is None
+
+
+def test_record_fetch_upserts(session):
+    db.record_fetch(session, "example", 12)
+    rows = session.execute(select(db.BoardFetch)).scalars().all()
+    assert len(rows) == 1
+    assert rows[0].fetch_count == 1
+    assert rows[0].last_job_count == 12
+    first_seen, seen_before = rows[0].first_seen, rows[0].last_seen
+
+    db.record_fetch(session, "example", 15)
+    rows = session.execute(select(db.BoardFetch)).scalars().all()
+    assert len(rows) == 1, "a repeat fetch must not create a second row"
+    assert rows[0].fetch_count == 2
+    assert rows[0].last_job_count == 15
+    assert rows[0].first_seen == first_seen, "first_seen is set once"
+    # Compare through _iso: SQLite drops tzinfo, so a value read back can be
+    # naive while a just-assigned one is aware.
+    assert db._iso(rows[0].last_seen) >= db._iso(seen_before)
 
 
 def test_searches_are_isolated_per_user(session):

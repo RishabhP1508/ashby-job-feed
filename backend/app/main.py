@@ -21,6 +21,7 @@ project can run as one deployable app.
 """
 from __future__ import annotations
 
+import logging
 import os
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
@@ -28,7 +29,7 @@ from pathlib import Path
 from typing import Any, AsyncIterator
 
 import httpx
-from fastapi import Depends, FastAPI, HTTPException, Query, Request, Response
+from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -84,6 +85,20 @@ def _client_ip(request: Request) -> str:
     return request.client.host if request.client else "unknown"
 
 
+def _log_fetch(slug: str, job_count: int) -> None:
+    """Record that a board was fetched, as a discovery signal.
+
+    Runs as a background task, so it is off the event loop and the response has
+    already been sent. It opens its own session on purpose: the request-scoped
+    one from get_session is closed by the time this runs.
+    """
+    try:
+        with db.SessionLocal() as session:
+            db.record_fetch(session, slug, job_count)
+    except Exception:  # noqa: BLE001 - a discovery write must never matter
+        logging.exception("could not record board fetch for %s", slug)
+
+
 # ---- job feed (public) ----
 @app.get("/api/health")
 def health() -> dict[str, str]:
@@ -91,7 +106,7 @@ def health() -> dict[str, str]:
 
 
 @app.get("/api/board/{slug}", response_model=BoardResponse)
-async def board(slug: str) -> BoardResponse:
+async def board(slug: str, background: BackgroundTasks) -> BoardResponse:
     slug = slug.strip().lower()
     if not slug or "/" in slug:
         raise HTTPException(status_code=400, detail="Invalid company handle.")
@@ -111,6 +126,11 @@ async def board(slug: str) -> BoardResponse:
             raise HTTPException(status_code=502, detail=f"Could not reach Ashby: {exc}")
         cache.set(slug, jobs)
         was_cached = False
+        # Misses only. This endpoint is public and otherwise touches no database,
+        # so logging every view would wake a scale-to-zero Postgres on each
+        # anonymous browse. Repeat views inside the cache TTL are free, and
+        # undercounting is fine for a discovery signal.
+        background.add_task(_log_fetch, slug, len(jobs))
 
     return BoardResponse(
         slug=slug,
